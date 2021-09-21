@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+  Interdiction d'acceder à cet page - Thrift Shop Vintage
+{% endblock %}
+
+{% block body %}
+  <div class="container">
+    <h1>
+      Vous tentez d'acceder à une page qui vous est refusé !
+    </h1>
+    <div class="alert alert-danger">
+      <p>
+        Vous n'avez pas le droit d'accéder à cette ressource
+      </p>
+     
+    </div>
+
+    <a href="{{ path('home') }}" class="btn btn-primary">
+      Retour à l'acceuil
+    </a>
+  </div>
+{% endblock %}

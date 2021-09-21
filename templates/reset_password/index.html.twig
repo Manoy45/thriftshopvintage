@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mot de passe oublié - Thrift Shop Vintage
+{% endblock %}
+
+{% block content %}
+	<div class="block-small">
+    {% for message in app.flashes('notice') %}
+        <div class="alert alert-danger">{{ message }}</div>
+    {% endfor %}
+		<form method="post">
+			<h1 class="h2 mb-3 font-weight-normal text-center">Réinitialiser mot de passe</h1>
+			<p class="text-center">Veuillez indiquer votre email :</p>
+
+			<input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email" autocomplete="email" required autofocus>
+
+			<button class="btn btn-lg btn-warning btn-block mt-3" type="submit">
+				Réinitialiser
+			</button>
+			<hr>
+			<p class="text-center">
+                Vous connaissez votre mot de passe ?
+				<a href="{{ path('app_login') }}">Se connecter</a>.
+			</p>
+
+		</form>
+	</div>
+{% endblock %}

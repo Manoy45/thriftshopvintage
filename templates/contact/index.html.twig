@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nous contacter - Thrift Shop Vintage{% endblock %}
+
+{% block content %}
+<h1 class="h2 text-center">Contactez-nous</h1>
+	<p class="text-center">Veuillez remplir les champs suivants :</p>
+    <hr>
+    {% for message in app.flashes('notice') %}
+        <div class="alert alert-info">{{ message }}</div>
+    {% endfor %}
+    <div class="row m-5">
+        <div class="col-md-7">{{ form(form) }}</div>
+        <div class="col-md-5 mb-5">
+            <strong>Thrift Shop Vintage</strong>
+            <hr>
+            <ul class="list-unstyled">
+                <li><i class="fas fa-mobile-alt"> </i> 06 62 20 29 85</li>
+                <li><i class="fas fa-map-marked-alt"> </i> 25 rue Faubourg Saint-Jean, Orléans 45000</li>
+                <li><i class="fas fa-envelope-open-text"> </i> contact@thriftshopvintage.fr</li>
+            </ul>
+            <hr>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2674.6092388658726!2d1.8892660156112138!3d47.905248075292675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e4e52cde8ae8c1%3A0x734ac0ef711266f6!2s25%20Rue%20du%20Faubourg%20Saint-Jean%2C%2045000%20Orl%C3%A9ans!5e0!3m2!1sfr!2sfr!4v1631911738080!5m2!1sfr!2sfr" width="470" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+    <hr>
+{% endblock %}

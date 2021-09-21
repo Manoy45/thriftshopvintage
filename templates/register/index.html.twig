@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription - Thrift Shop Vintage
+{% endblock %}
+
+{% block content %}
+	<h1 class="h2 text-center">Inscription</h1>
+	<p class="text-center">Veuillez remplir les champs suivants :</p>
+
+	{% if notification %}
+		<div class="alert alert-info">{{ notification }}</div>
+	{% endif %}
+
+	{{ form(form)}}
+{% endblock %}

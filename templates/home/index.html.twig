@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block carousel %}{% endblock %}
+
+{% block content %}
+	<!-- Three columns of text below the carousel -->
+	<h2 class="text-center">Nos meilleures ventes</h2>
+	<p class="text-center">Découvrez les articles les plus vendus.</p>
+	<div class="row">
+		{% for product in products %}
+			<div class="col-md-3">
+				{% include 'product/single_product.html.twig' %}
+			</div>
+		{% endfor %}
+	</div>
+	<!-- /.row -->
+
+
+	<!-- START THE FEATURETTES -->
+
+	<hr class="featurette-divider">
+
+	<div class="row featurette">
+		<div class="col-md-7">
+			<h2 class="featurette-heading">SECONDE MAIN, GESTE MALIN,
+				<span class="text-muted">FAITES DU BIEN À LA PLANÈTE !</span>
+			</h2>
+			<p class="lead">Vous aimez vous promenez en forêt, entendre les oiseaux chanter, vous baignez dans une belle rivière à l’eau translucide ou tout simplement boire de l’eau propre à la sortie du robinet ? Nous aussi. Malheureusement, le renouvellement constant des collections de la fast fashion qui nous amène à acheter deux fois plus qu’avant et à s’en débarrasser deux fois plus vite également détruit notre planète à plus ou moins petit feu. Nous vous proposons donc la solution pour continuer à vous faire plaisir en réduisant votre impact environnemental au quotidien. </p>
+		</div>
+		<div class="col-md-5 m-auto">
+			<img src="{{ asset('assets/img/arbre.jpg') }}" class="img-fluid" alt="Un savoir faire Francais">
+		</div>
+	</div>
+
+	<hr class="featurette-divider">
+
+	<div class="row featurette">
+		<div class="col-md-7 order-md-2">
+			<h2 class="featurette-heading">ÉCONOMISEZ DE L'ARGENT !
+				<span class="text-muted">ACHETEZ VOS VÊTEMENTS D'OCCASION.</span>
+			</h2>
+			<p class="lead">Vous aussi vous être accro au shopping ? Ou vous avez tout simplement envie de renouveler votre garde robe ? Oui, mais pas à n’importe quel prix ! Heureusement pour vous, vous avez atterri au bon endroit. La mode est un luxe qu’on ne peut parfois pas se payer alors chez Once Again nous avons décidé de mettre à votre disposition un vide dressing en ligne proposant toutes les marques que vous aimé à -80%. De rien. Puisque nous croyons qu’aucune femme ne devrait renoncer à se faire plaisir avec une jolie petite robe et qu’aucun homme ne devrait casser sa tirelire pour s’acheter une nouvelle chemise, nous nous engageons à rendre la mode plus accessible à tous… et ce, sans rogner sur la qualité !</p>
+		</div>
+		<div class="col-md-5 m-auto order-md-1">
+			<img src="{{ asset('assets/img/argent.jpg') }}" class="img-fluid" alt="Une boutique ouverte toute l'année">
+		</div>
+	</div>
+
+	<hr class="featurette-divider">
+
+	<div class="row featurette">
+		<div class="col-md-7">
+			<h2 class="featurette-heading">ÉCONOMISEZ DU TEMPS !
+				<span class="text-muted">VENDEZ VOS VÊTEMENTS.</span>
+			</h2>
+			<p class="lead">Vendre vos vêtements, vous en rêvez ? Oui, mais voila : c’est une activité chronophage et vous n’avez pas le temps. Nous comprenons que trier ses vêtements, prendre des photos, les mettre en ligne, rédiger les annonces, stocker les vêtements, répondre aux questions des acheteurs puis envoyer les colis prend du temps. Grâce à nous, vous ne vous occupez de rien ! Vous n’avez qu’à commander une étiquette Mondial Relay gratuitement et à nous envoyer vos vêtements. On s’occupe de tout.</p>
+		</div>
+		<div class="col-md-5 m-auto">
+			<img src="{{ asset('assets/img/sablier.jpg') }}" class="img-fluid" alt="Un savoir faire Francais">
+		</div>
+	</div>
+	<hr class="featurette-divider">
+<!-- /END THE FEATURETTES -->
+{% endblock %}
